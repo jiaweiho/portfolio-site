@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Site
+
+A modern, high-performance, fully responsive personal portfolio website built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS**. Designed to showcase professional software engineering experience, core competencies, and featured technical projects.
+
+![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=flat-square&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-19.2-blue?style=flat-square&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)
+
+---
+
+## Features
+
+- **Modern Tech Stack**: Built on Next.js App Router for optimal performance, server-side rendering, and seamless navigation.
+- **Responsive & Accessible Design**: Beautiful custom UI optimized for all devices, from mobile phones to ultra-wide desktop monitors.
+- **Dynamic Theme Management**: Supports light and dark mode preferences out of the box using `next-themes`.
+- **Modular Project Showcase**: Highlights core professional projects, tech stacks, and live code/demo links.
+- **Interactive Components**: Powered by Tailwind CSS and Lucide React icons for clean visual hierarchy and micro-interactions.
+
+---
+
+## Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org) (App Router)
+- **UI Library**: [React](https://react.dev)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Icons**: [Lucide React](https://lucide.dev)
+- **Language**: [TypeScript](https://www.typescriptlang.org)
+- **Theme Management**: [next-themes](https://github.com/pacocoursey/next-themes)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to run the project locally on your machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Prerequisites
+
+Ensure you have one of the following package managers installed:
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- `npm`, `yarn`, `pnpm`, or `bun`
+
+### Installation & Running Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/portfolio_site.git
+   cd portfolio_site
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+4. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+---
+
+## Project Structure
+
+```text
+portfolio_site/
+├── src/
+│   ├── app/                # Next.js App Router pages and layouts
+│   ├── components/         # Reusable UI components (layout, buttons, cards)
+│   ├── data/               # Static project data, profile details, and skills
+│   └── lib/                # Utility functions and shared helpers
+├── public/                 # Static assets (images, icons)
+├── package.json            # Project dependencies and scripts
+└── README.md               # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` — Starts the development server.
+- `npm run build` — Builds the application for production.
+- `npm run start` — Starts the production server.
+- `npm run lint` — Runs ESLint to check code quality.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Distributed under the MIT License. See `LICENSE` for more information.
