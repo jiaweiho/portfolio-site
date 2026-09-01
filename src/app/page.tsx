@@ -1,10 +1,36 @@
+'use client';
+
 import { Navbar } from "@/components/layout/navbar";
 import { ProjectCard } from "@/components/ui/project-card";
-import { projects, profile } from "@/data/projects";
+import { Project, profile as fallbackProfile, projects as fallbackProjects } from "@/data/projects";
 import { Icons } from "@/components/ui/icons";
 import { Mail, ArrowRight, Code2, Database, Layout } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [projects, setProjects] = useState<Project[]>(fallbackProjects);
+  const [profile, setProfile] = useState(fallbackProfile);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = await fetch('/api/portfolio-site');
+        if (res.ok) {
+          const data = await res.json();
+          
+          if (data.projects) setProjects(data.projects);
+          if (data.profile) setProfile(data.profile);
+        }
+      } catch (error) {
+        console.error('Failed to fetch from API:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchData();
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -13,7 +39,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="flex flex-col items-center text-center space-y-6 max-w-3xl mx-auto py-10">
           <div className="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-blue-950 border border-blue-200/80 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800/50 text-sm font-semibold mb-4 shadow-xs">
-            Available for exciting opportunities
+            Available for any exciting opportunities
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
             {profile.name}
@@ -52,7 +78,7 @@ export default function Home() {
               <Database className="w-10 h-10 text-blue-700 dark:text-blue-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-zinc-950 dark:text-zinc-50">Backend</h3>
               <div className="flex flex-wrap gap-2">
-                {profile.skills.backend.map(skill => (
+                {profile.skills?.backend?.map(skill => (
                   <span key={skill} className="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-lg text-sm font-semibold border border-zinc-300 dark:border-zinc-700 shadow-2xs">{skill}</span>
                 ))}
               </div>
@@ -62,7 +88,7 @@ export default function Home() {
               <Layout className="w-10 h-10 text-blue-700 dark:text-blue-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-zinc-950 dark:text-zinc-50">Frontend</h3>
               <div className="flex flex-wrap gap-2">
-                {profile.skills.frontend.map(skill => (
+                {profile.skills?.frontend?.map(skill => (
                   <span key={skill} className="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-lg text-sm font-semibold border border-zinc-300 dark:border-zinc-700 shadow-2xs">{skill}</span>
                 ))}
               </div>
@@ -72,7 +98,7 @@ export default function Home() {
               <Code2 className="w-10 h-10 text-blue-700 dark:text-blue-400 mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-zinc-950 dark:text-zinc-50">Infrastructure</h3>
               <div className="flex flex-wrap gap-2">
-                {profile.skills.tools.map(skill => (
+                {profile.skills?.tools?.map(skill => (
                   <span key={skill} className="px-3 py-1 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-lg text-sm font-semibold border border-zinc-300 dark:border-zinc-700 shadow-2xs">{skill}</span>
                 ))}
               </div>
@@ -111,7 +137,7 @@ export default function Home() {
                 <Mail className="w-6 h-6 text-blue-700 dark:text-blue-400" /> {profile.email}
               </a>
               <a 
-                href={profile.socials.linkedin} 
+                href={profile.socials?.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-lg font-bold text-zinc-900 dark:text-zinc-100 hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
@@ -119,7 +145,7 @@ export default function Home() {
                 <Icons.linkedin className="w-6 h-6 text-blue-700 dark:text-blue-400" /> LinkedIn
               </a>
               <a 
-                href={profile.socials.github} 
+                href={profile.socials?.github} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-lg font-bold text-zinc-900 dark:text-zinc-100 hover:text-blue-700 dark:hover:text-blue-400 transition-colors"

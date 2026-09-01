@@ -60,8 +60,8 @@ export const projects: Project[] = [
 ];
 
 export const profile = {
-  name: "Jia Wei Ho",
-  title: "Senior Backend Engineer",
+  name: "Wei Ho",
+  title: "Backend Engineer",
   elevatorPitch: "Result-oriented, cross-team collaborative spirit.",
   email: "jiwei.ho@gmail.com",
   socials: {
@@ -69,8 +69,8 @@ export const profile = {
     github: "https://github.com/jiaweiho"
   },
   skills: {
-    backend: ["Node.js", "Go", "Python", "PostgreSQL", "Redis", "GraphQL", "REST API"],
+    backend: ["Kotlin", "Langchain", "Python", "PostgreSQL", "Redis", "GraphQL", "REST API", "Swagger", "Elasticsearch", "Kafka", "Node.js"],
     frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    tools: ["Docker", "Kubernetes", "AWS", "CI/CD", "Git"]
+    tools: ["Docker", "Kubernetes", "AWS", "CI/CD", "Git", "Azure", "Azure Storage"]
   }
 };
