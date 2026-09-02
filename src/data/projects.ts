@@ -60,9 +60,9 @@ export const projects: Project[] = [
 ];
 
 export const profile = {
-  name: "Wei Ho",
-  title: "Backend Engineer",
-  elevatorPitch: "Result-oriented, cross-team collaborative spirit.",
+  name: "Jia Wei Ho",
+  title: "Senior Backend Engineer",
+  elevator_pitch: "Result-oriented, curious, cross-team collaborative engineer",
   email: "jiwei.ho@gmail.com",
   socials: {
     linkedin: "https://linkedin.com/in/jiaweiho",

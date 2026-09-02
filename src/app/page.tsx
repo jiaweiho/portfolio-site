@@ -55,7 +55,7 @@ export default function Home() {
             {profile.title}
           </p>
           <p className="text-xl text-zinc-900 dark:text-zinc-300 max-w-2xl font-semibold leading-relaxed">
-            {profile.elevatorPitch}
+            {profile.elevator_pitch}
           </p>
           <div className="flex gap-4 pt-4">
             <a 
