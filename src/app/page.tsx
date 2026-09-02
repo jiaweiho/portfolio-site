@@ -37,40 +37,48 @@ export default function Home() {
       
       <main className="container mx-auto px-4 py-20 space-y-32">
         {/* Hero Section */}
-        <section className="flex flex-col items-center text-center space-y-6 max-w-3xl mx-auto py-10">
-          <div className="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-blue-950 border border-blue-200/80 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800/50 text-sm font-semibold mb-4 shadow-xs">
-            Available for any exciting opportunities
+        <section className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto py-12 md:py-20">
+          <div className="flex flex-col items-start text-left space-y-6">
+            <div className="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-blue-950 border border-blue-200/80 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800/50 text-sm font-semibold shadow-xs">
+              Available for any engineering opportunities
+            </div>
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
+              {profile.name}
+            </h1>
+            <p className="text-2xl md:text-3xl text-zinc-900 dark:text-zinc-200 font-bold">
+              {profile.title}
+            </p>
+            <p className="text-xl text-zinc-900 dark:text-zinc-300 max-w-xl font-semibold leading-relaxed">
+              {profile.elevator_pitch}
+            </p>
+            <div className="flex gap-4 pt-4">
+              <a 
+                href="#projects" 
+                className="bg-zinc-900 dark:bg-zinc-100 text-zinc-50 dark:text-zinc-900 px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-black dark:hover:bg-white transition-all shadow-md hover:shadow-lg"
+              >
+                View Work <ArrowRight className="w-4 h-4" />
+              </a>
+              <a 
+                href={`mailto:${profile.email}`}
+                className="bg-transparent border-2 border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100 px-8 py-3 rounded-full font-bold hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all"
+              >
+                Contact Me
+              </a>
+            </div>
           </div>
-          {profile.img_path &&
-            <img 
-            src={profile.img_path || "/profile/profile.jpg"} 
-            alt={profile.name}
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-white dark:border-zinc-800 mb-2"
-          />
-          }
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
-            {profile.name}
-          </h1>
-          <p className="text-2xl md:text-3xl text-zinc-900 dark:text-zinc-200 font-bold">
-            {profile.title}
-          </p>
-          <p className="text-xl text-zinc-900 dark:text-zinc-300 max-w-2xl font-semibold leading-relaxed">
-            {profile.elevator_pitch}
-          </p>
-          <div className="flex gap-4 pt-4">
-            <a 
-              href="#projects" 
-              className="bg-zinc-900 dark:bg-zinc-100 text-zinc-50 dark:text-zinc-900 px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-black dark:hover:bg-white transition-all shadow-md hover:shadow-lg"
-            >
-              View Work <ArrowRight className="w-4 h-4" />
-            </a>
-            <a 
-              href={`mailto:${profile.email}`}
-              className="bg-transparent border-2 border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100 px-8 py-3 rounded-full font-bold hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all"
-            >
-              Contact Me
-            </a>
-          </div>
+          
+          {profile.img_path && (
+            <div className="flex justify-center md:justify-end relative">
+              <div className="relative w-64 h-64 md:w-80 md:h-80">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-600/20 to-purple-600/20 dark:from-blue-500/30 dark:to-purple-500/30 blur-2xl -z-10 transform scale-110"></div>
+                <img 
+                  src={profile.img_path || "/profile/profile.jpg"} 
+                  alt={profile.name}
+                  className="w-full h-full rounded-full object-cover shadow-2xl border-4 border-white dark:border-zinc-800"
+                />
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Skills Section */}
