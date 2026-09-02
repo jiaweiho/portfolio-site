@@ -69,7 +69,7 @@ export const profile = {
     github: "https://github.com/jiaweiho"
   },
   skills: {
-    backend: ["Kotlin", "Langchain", "Python", "PostgreSQL", "Redis", "GraphQL", "REST API", "Swagger", "Elasticsearch", "Kafka", "Node.js"],
+    backend: ["Kotlin", "Langchain", "Java", "PostgreSQL", "Redis", "GraphQL", "REST API", "Swagger", "Elasticsearch", "Kafka", "Node.js"],
     frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     tools: ["Docker", "Kubernetes", "AWS", "CI/CD", "Git", "Azure", "Azure Storage"]
   },
