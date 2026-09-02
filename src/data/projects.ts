@@ -22,7 +22,7 @@ export const projects: Project[] = [
     tags: ["Backend", "Cross team collaboration", "API Integration"],
     role: "Senior Backend Engineer",
     technologies: ["Kotlin", "PostgreSQL", "React", "Backoffice-tool"],
-    image: "/projects/kpi-dashboard.jpg"
+    image: "/projects/cars-release.png"
   },
   {
     id: "2",
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     tags: ["Integration", "CMS", "Workflow Automation"],
     role: "Senior Backend Engineer",
     technologies: ["Kotlin", "GraphQL", "Redis", "API Integration"],
-    image: "/projects/cms-integration.jpg"
+    image: "/projects/cms-platform-integration.png"
   },
   {
     id: "3",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     tags: ["AI", "Machine Learning", "Backend"],
     role: "Senior Backend Engineer",
     technologies: ["Kotlin", "Langchain", "Elasticsearch", "Swagger"],
-    image: "/projects/ai-recommendation.jpg"
+    image: "/projects/chatbot.png"
   },
   {
     id: "4",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
       live: "https://jiaweiho.com"
     },
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    image: "/projects/portfolio.jpg"
+    image: "/projects/portfolio-site.png"
   }
 ];
 
