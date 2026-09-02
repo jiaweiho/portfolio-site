@@ -12,9 +12,10 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
-          <Link href="#projects" className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">Projects</Link>
-          <Link href="#skills" className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">Skills</Link>
-          <Link href="#contact" className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">Contact</Link>
+          <Link href="/#projects" className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">Projects</Link>
+          <Link href="/#skills" className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">Skills</Link>
+          <Link href="/about" className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">About</Link>
+          <Link href="/#contact" className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors">Contact</Link>
         </nav>
 
         <div className="flex items-center gap-4">
