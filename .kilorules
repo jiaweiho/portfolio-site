@@ -1,0 +1,18 @@
+# Portfolio Development Guidelines
+
+## Stack & Core Principles
+- **Framework:** Next.js (App Router with React Server Components by default).
+- **Styling:** Tailwind CSS with modern design system patterns (flexbox/grid layouts, dynamic sub-pixel grids, clean gaps).
+- **UI Components:** Shadcn UI or Radix primitives for accessibility and unstyled, customizable bases.
+- **Images:** Always use `next/image` with fixed aspect ratios (`16:9` or `4:3`), priority loading for hero content, and WebP/AVIF formats.
+
+## Modern Layout & UX Best Practices
+- **Visuals:** Bento-grid or card-based layouts for project showcases.
+- **Micro-interactions:** Subtle hover states, smooth CSS transitions, and minimal layout shifts (CLS).
+- **Performance:** Optimize for Web Vitals. Keep dynamic JavaScript bundles minimal; fetch data inside Server Components.
+- **Dark Mode:** Support `next-themes` with system preference detection and crisp color tokens.
+
+## Code Quality Rules
+- Write clean, type-safe TypeScript code without relying on `any`.
+- Keep components modular, isolated, and self-contained within `/components`.
+- Apply `"use client"` strictly at the lowest component level possible for interactive elements.

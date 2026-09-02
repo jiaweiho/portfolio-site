@@ -29,6 +29,14 @@ export function ProjectCard({ project }: { project: Project }) {
             )}
           </div>
         </div>
+
+        {project.image && (
+          <img 
+            src={project.image} 
+            alt={project.title}
+            className="w-full h-48 object-cover rounded-xl mb-6 border border-zinc-200 dark:border-zinc-800"
+          />
+        )}
         
         <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
           {project.title}

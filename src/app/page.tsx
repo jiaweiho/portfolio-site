@@ -41,6 +41,13 @@ export default function Home() {
           <div className="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-blue-950 border border-blue-200/80 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800/50 text-sm font-semibold mb-4 shadow-xs">
             Available for any exciting opportunities
           </div>
+          {profile.img_path &&
+            <img 
+            src={profile.img_path || "/profile/profile.jpg"} 
+            alt={profile.name}
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-white dark:border-zinc-800 mb-2"
+          />
+          }
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">
             {profile.name}
           </h1>
