@@ -14,7 +14,7 @@ export async function GET() {
     let supabaseProfile = null
 
     if (hasSupabaseConfig) {
-      const { data: projData, error: projError } = await supabase.from('projects').select('*')
+      const { data: projData, error: projError } = await supabase.from('projects').select('*').order("id")
       if (projError) {
         console.error('Supabase projects error:', projError)
       } else if (projData && projData.length > 0) {
