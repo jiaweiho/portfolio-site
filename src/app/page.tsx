@@ -35,7 +35,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container mx-auto px-4 py-20 space-y-32">
+      <main className="container dark:bg-zinc-950 bg-white/95 mx-auto px-4 py-20 space-y-32">
         {/* Hero Section */}
         <section className="grid md:grid-cols-1 gap-12 items-center max-w-6xl mx-auto py-12 md:py-20">
           <div className="flex flex-col items-center text-left space-y-6">
@@ -45,19 +45,19 @@ export default function Home() {
             <p className="text-2xl md:text-3xl text-zinc-900 dark:text-zinc-200 font-bold">
               {profile.title}
             </p>
-            <p className="text-xl text-zinc-900 dark:text-zinc-300 max-w-xl font-semibold leading-relaxed">
+            <p className="text-xl text-zinc-900 dark:text-zinc-300 text-center max-w-xl font-semibold leading-relaxed">
               {profile.elevator_pitch}
             </p>
             <div className="flex gap-4 pt-4">
               <a 
                 href="#projects" 
-                className="bg-zinc-900 dark:bg-zinc-100 text-zinc-50 dark:text-zinc-900 px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-black dark:hover:bg-white transition-all shadow-md hover:shadow-lg"
+                className="bg-zinc-900 dark:bg-zinc-100 text-zinc-50 dark:text-zinc-900 px-8 py-3 rounded-full font-bold flex items-center text-center gap-2 hover:bg-black dark:hover:bg-white transition-all shadow-md hover:shadow-lg"
               >
                 View Projects <ArrowRight className="w-4 h-4" />
               </a>
               <a 
                 href={`mailto:${profile.email}`}
-                className="bg-transparent border-2 border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100 px-8 py-3 rounded-full font-bold hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all"
+                className="bg-transparent border-2 border-zinc-900 dark:border-zinc-100 text-zinc-900 dark:text-zinc-100 px-8 py-3 rounded-full font-bold text-center hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all"
               >
                 Contact Me
               </a>
