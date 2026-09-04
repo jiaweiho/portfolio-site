@@ -35,7 +35,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="container dark:bg-zinc-950 bg-white/95 mx-auto px-4 py-20 space-y-32">
+      <main className="dark:bg-zinc-950 bg-white/95 mx-auto px-4 py-20 space-y-32">
         {/* Hero Section */}
         <section className="grid md:grid-cols-1 gap-12 items-center max-w-6xl mx-auto py-12 md:py-20">
           <div className="flex flex-col items-center text-left space-y-6">
@@ -51,7 +51,7 @@ export default function Home() {
             <div className="flex gap-4 pt-4">
               <a 
                 href="#projects" 
-                className="bg-zinc-900 dark:bg-zinc-100 text-zinc-50 dark:text-zinc-900 px-8 py-3 rounded-full font-bold flex items-center text-center gap-2 hover:bg-black dark:hover:bg-white transition-all shadow-md hover:shadow-lg"
+                className="bg-blue-700 dark:bg-blue-400 text-zinc-50 dark:text-zinc-900 px-8 py-3 rounded-full font-bold flex items-center text-center gap-2 hover:bg-black dark:hover:bg-white transition-all shadow-md hover:shadow-lg"
               >
                 View Projects <ArrowRight className="w-4 h-4" />
               </a>
@@ -156,7 +156,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-zinc-200 dark:border-zinc-800 py-12 text-center text-sm font-medium text-zinc-700 dark:text-zinc-400">
+      <footer className="border-t border-zinc-200 dark:border-zinc-800 py-12 text-center text-sm font-medium text-white dark:text-zinc-400">
         <p>© {new Date().getFullYear()} {profile.name}. Built with Next.js and Tailwind CSS.</p>
       </footer>
     </div>

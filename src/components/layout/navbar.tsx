@@ -15,8 +15,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-black text-white tracking-tighter hover:text-blue-700 transition-colors">
-          JW<span className="text-blue-700 dark:text-blue-400">H</span>
+        <Link href="/" className="text-xl font-black text-blue-700 dark:text-blue-400">
+          JWH
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-wide">
@@ -35,7 +35,7 @@ export function Navbar() {
               <Icons.linkedin className="w-5 h-5" />
             </a>
           </div>
-          {/* <div className="border-l border-zinc-200 dark:border-zinc-800 pl-4">
+{/*           <div className="border-l border-zinc-200 dark:border-zinc-800 pl-4">
             <ModeToggle />
           </div> */}
 
@@ -68,18 +68,18 @@ export function Navbar() {
               Skills
             </Link>
             <Link
-              href="/about"
-              onClick={closeMenu}
-              className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
-            >
-              About
-            </Link>
-            <Link
               href="/#contact"
               onClick={closeMenu}
               className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
             >
               Contact
+            </Link>
+            <Link
+              href="/about"
+              onClick={closeMenu}
+              className="text-zinc-900 dark:text-zinc-300 hover:text-blue-700 dark:hover:text-blue-400 transition-colors"
+            >
+              About
             </Link>
           </nav>
           <div className="flex sm:hidden items-center gap-4 pt-4 border-t border-zinc-200 dark:border-zinc-800">

@@ -25,29 +25,7 @@
   --color-ring: var(--ring);
 }
 
-:root {
-  --background: #ffffff; /* Crisp pure white background wrap for light mode */
-  --foreground: #020617; /* Slate 950 - WCAG AAA contrast (> 15:1) */
-  --card: #ffffff;
-  --card-foreground: #020617;
-  --popover: #ffffff;
-  --popover-foreground: #020617;
-  --primary: #1d4ed8; /* Blue 700 - WCAG AA/AAA compliant (8.5:1 on white) */
-  --primary-foreground: #ffffff;
-  --secondary: #f1f5f9; /* Slate 100 */
-  --secondary-foreground: #0f172a; /* Slate 900 */
-  --muted: #f8fafc; /* Slate 50 */
-  --muted-foreground: #334155; /* Slate 700 - WCAG AAA high contrast (10:1 on white) */
-  --accent: #f1f5f9;
-  --accent-foreground: #0f172a;
-  --destructive: #dc2626; /* Red 600 */
-  --destructive-foreground: #ffffff;
-  --border: #cbd5e1; /* Slate 300 - High contrast clear borders in light mode */
-  --input: #cbd5e1;
-  --ring: #1d4ed8;
-}
-
-.dark {
+.root {
   --background: #09090b; /* Zinc 950 - Correct dark mode background */
   --foreground: #fafafa; /* Zinc 50 - WCAG AAA contrast (> 18:1 on #09090b) */
   --card: #121215; /* Elevated dark card background */

@@ -143,7 +143,7 @@ export default function AboutPage() {
         {/* Header Profile Section */}
         <section className="grid md:grid-cols-3 gap-8 items-center border-b border-zinc-200 dark:border-zinc-800 pb-12">
           <div className="md:col-span-2 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 text-xs font-extrabold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-400 text-xs font-extrabold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" /> Senior Backend Engineer
             </div>
             <h1 className="text-4xl md:text-6xl font-black tracking-tight text-zinc-950 dark:text-zinc-50">
