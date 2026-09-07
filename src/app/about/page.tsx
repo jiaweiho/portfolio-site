@@ -78,7 +78,7 @@ export default function AboutPage() {
   const achievements = [
     {
       title: "Agentic AI & Multi-Agent Orchestration",
-      description: "Architected multi-agent solutions using Supervisor and Handoff patterns, incorporating template-driven system messages, custom tool setups, and LangChain for internal stakeholders and Volvo Support end-users."
+      description: "Developed multi-agent solutions using Supervisor and Handoff patterns, incorporating template-driven system messages, custom tool setups, and LangChain for internal stakeholders and Volvo Support end-users."
     },
     {
       title: "Content Integrations",
