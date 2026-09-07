@@ -102,7 +102,7 @@ export default function AboutPage() {
     },
     {
       title: "LLM Evaluation Framework",
-      description: "Expanded internal evaluation systems utilizing deterministic path validation combined with LLM-as-a-Judge techniques and Redis memory analysis."
+      description: "Used internal evaluation systems utilizing deterministic path validation combined with LLM-as-a-Judge techniques and Redis memory analysis."
     },
     {
       title: "Testing & Observability",
